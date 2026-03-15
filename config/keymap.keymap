@@ -9,7 +9,7 @@
 // https://zmk.dev/docs/keymaps/input-processors/code-mapper
 &pointing_listener {
     scroller {
-        // layers = <3>;
+        layers = <3>;
         input-processors = <&zip_xy_to_scroll_mapper>;
     };
 };
