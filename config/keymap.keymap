@@ -5,7 +5,14 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <input/processors.dtsi>
 
-
+// レイヤー3をスクロールに割り当てる
+// https://zmk.dev/docs/keymaps/input-processors/code-mapper
+&pointing_listener {
+    scroller {
+        layers = <3>;
+        input-processors = <&zip_xy_to_scroll_mapper>;
+    };
+};
 
 // OS設定を日本語キーボードのまま使用するための変換定義
 // https://note.com/kloir_z/n/n314e739f03a1
